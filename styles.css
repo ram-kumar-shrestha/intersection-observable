@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  padding: 2rem;
+  width: 100vw;
+  position: relative;
+
+  #scroll-animation {
+    background-color: #f4f4f4;
+
+    padding: 1em;
+    max-height: 40vh;
+    overflow-y: auto;
+    border-radius: 0.4em;
+
+    div {
+      font-size: 0.8em;
+      max-width: 80%;
+      margin: auto;
+      margin-block: 1em;
+      opacity: 0;
+      transition: all 1s ease-in-out; /*used 1s for delayed animation*/
+
+      &:is(.active-animation) {
+        opacity: 1;
+        translate: 0 -10px;
+      }
+    }
+  }
+
+  #lazy-loading {
+    margin-block: 10px;
+    position: sticky;
+    top: 0;
+    border: solid green 0.2em;
+
+    max-height: 20em;
+    overflow: auto;
+
+    .image-container {
+      margin-top: 20em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .image-container img {
+      width: 10rem;
+      height: auto;
+      object-fit: cover;
+      transition: opacity 1s ease;
+    }
+    .image-container img.lazy {
+      opacity: 0;
+    }
+  }
+}
+
+/* scrollbar custom */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 999em;
+}

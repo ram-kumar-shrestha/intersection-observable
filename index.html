@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection Observer Experiment</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <h1>Intersection Observer Experiment</h1>
+
+      <section id="scroll-animation">
+        <h2>Scroll Animation</h2>
+      </section>
+
+      <section id="lazy-loading">
+        <h2>Lazy Loaded Images</h2>
+
+        <div class="image-container">
+          <img
+            data-src="https://fastly.picsum.photos/id/605/200/300.jpg?hmac=XxO9Fq91nFhrH3zq-9AlrpU84EnKslY5CeTA_6dBlRg"
+            class="lazy"
+            alt="Lazy image 1"
+          />
+          <img
+            data-src="https://fastly.picsum.photos/id/937/200/300.jpg?hmac=e85ZMdNwmCfn1FopDunIZzaSxZC2-lC9qsLqb6V0xpQ"
+            class="lazy"
+            alt="Lazy image 2"
+          />
+          <img
+            data-src="https://fastly.picsum.photos/id/490/200/300.jpg?hmac=8hYDsOwzzMCthBMYMN9bM6POtrJfVAmsvamM2oOEiF4"
+            class="lazy"
+            alt="Lazy image 3"
+          />
+          <img
+            data-src="https://fastly.picsum.photos/id/931/200/300.jpg?hmac=j4ZWid4CKIZ1iSYZTs79i2GaiX4vgxlB2_1Efxiko84"
+            class="lazy"
+            alt="Lazy image 4"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
